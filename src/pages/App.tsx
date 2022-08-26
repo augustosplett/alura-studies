@@ -3,11 +3,12 @@ import Formulario from '../components/formulario';
 import Lista from '../components/lista';
 import style from './App.module.scss';
 import { useState } from 'react';
-import { ITarefa } from '../types/ITarefa';
 
 function App() {
 
-  const [tarefas, setTarefas] = useState<ITarefa[]>([]);
+  const [tarefas, setTarefas] = useState(
+    [{tarefa: 'React', tempo: '02:00:00' },{tarefa: 'JavaScript', tempo: '01:00:00' }]
+  );
 
   return (
     <div className={style.AppStyle}>
